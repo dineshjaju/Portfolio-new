@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>demo</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>final</groupId>
+	<artifactId>final</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
-	<name>demo</name>
+	<name>final</name>
 	<repositories>
 		<repository>
 			<id>eap</id>
@@ -52,6 +52,21 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-core</artifactId>
+			<version>1.19</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.19</version>
+		</dependency>
+		<dependency>
+		<groupId>com.sun.jersey.contribs</groupId>
+		<artifactId>jersey-multipart</artifactId>
+		<version>1.19</version>
+	</dependency>
 	</dependencies>
 	<profiles>
 		<profile>
@@ -64,7 +79,7 @@
 			<!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
 			<id>openshift</id>
 			<build>
-				<finalName>demo</finalName>
+				<finalName>final</finalName>
 				<plugins>
 					<plugin>
 						<artifactId>maven-war-plugin</artifactId>
@@ -78,4 +93,5 @@
 			</build>
 		</profile>
 	</profiles>
+		
 </project>
